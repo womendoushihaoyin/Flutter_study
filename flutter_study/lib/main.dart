@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'Model/post.dart';
+import 'Demo/listview_demo.dart';
 import 'dart:io';
 
 class MyHttpOverrides extends HttpOverrides {
@@ -34,40 +34,17 @@ class App extends StatelessWidget {
 }
 
 class Hello extends StatelessWidget {
-  Widget _itemBuilder(BuildContext context, int index) {
-    return Container(
-      color: Colors.white,
-      margin: EdgeInsets.all(10),
-      child: Column(
-        children: <Widget>[
-          Image.network(
-            posts[index].imageUrl,
-            errorBuilder: (context, error, stackTrace) => Icon(Icons.error),
-          ),
-          SizedBox(height: 16),
-          Text(
-            posts[index].title,
-            style: Theme.of(context).textTheme.titleSmall,
-          ),
-          Text(
-            posts[index].author,
-            style: Theme.of(context).textTheme.labelMedium,
-          ),
-          SizedBox(height: 16),
-        ],
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("lxy-code"), centerTitle: true, elevation: 10),
-      body: ListView.builder(
-        itemCount: posts.length,
-        itemBuilder: _itemBuilder,
-      ),
+      body: ListViewDemo(),
       backgroundColor: Colors.grey[100],
     );
   }
 }
+
+
+// ListView 控件 builder
+// Image的用法
+// 临时绕过https证书校验
