@@ -38,34 +38,44 @@ class App extends StatelessWidget {
 class Hello extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("lxy-code"),
-        centerTitle: true,
-        elevation: 10,
-        leading: IconButton(
-          icon: Icon(Icons.menu),
-          onPressed: () {
-            debugPrint("menu");
-          },
+    return DefaultTabController(
+      length: 3,
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text("lxy-code"),
+          centerTitle: true,
+          elevation: 10,
+          leading: IconButton(
+            icon: Icon(Icons.menu),
+            onPressed: () {
+              debugPrint("menu");
+            },
+          ),
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(Icons.search),
+              onPressed: () => debugPrint("search"),
+            ),
+          ],
+          bottom: TabBar(
+            tabs: <Widget>[
+              Icon(Icons.favorite),
+              Icon(Icons.history),
+              Icon(Icons.person),
+            ],
+          ),
         ),
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.search),
-            onPressed: () => debugPrint("search"),
-          ),
-          IconButton(
-            icon: Icon(Icons.settings),
-            onPressed: () => debugPrint("settings"),
-          ),
-        ],
+        body: TabBarView(
+          children: <Widget>[
+            Icon(Icons.favorite, size: 128, color: Colors.black12),
+            Icon(Icons.history, size: 128, color: Colors.black),
+            Icon(Icons.person, size: 128, color: Colors.black),
+          ],
+        )
       ),
-      body: Center(child: Text("Hello")),
     );
   }
 }
 
 
-// IconButton 用法
-// leading
-// actions
+// TabBar TabBarView DefaultTabController
