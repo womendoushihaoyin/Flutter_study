@@ -58,6 +58,10 @@ class Hello extends StatelessWidget {
             ),
           ],
           bottom: TabBar(
+            unselectedLabelColor: Colors.black38,
+            indicatorSize: TabBarIndicatorSize.tab,
+            indicatorColor: Colors.black54,
+            indicatorWeight: 1,
             tabs: <Widget>[
               Icon(Icons.favorite),
               Icon(Icons.history),
@@ -77,5 +81,7 @@ class Hello extends StatelessWidget {
   }
 }
 
-
-// TabBar TabBarView DefaultTabController
+// TabBar unselectedLabelColor: Colors.black38,
+// indicatorSize: TabBarIndicatorSize.tab,
+// indicatorColor: Colors.black54,
+// indicatorWeight: 1,
