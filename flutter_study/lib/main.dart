@@ -47,12 +47,6 @@ class Hello extends StatelessWidget {
           title: Text("lxy-code"),
           centerTitle: true,
           elevation: 10,
-          leading: IconButton(
-            icon: Icon(Icons.menu),
-            onPressed: () {
-              debugPrint("menu");
-            },
-          ),
           actions: <Widget>[
             IconButton(
               icon: Icon(Icons.search),
@@ -91,16 +85,19 @@ class Hello extends StatelessWidget {
               ListTile(
                 title: Text("Message", textAlign: TextAlign.right,),
                 trailing: Icon(Icons.message, color: Colors.black12, size: 22.0),
+                onTap: () => Navigator.pop(context),
               ),
 
               ListTile(
                 title: Text("Favorite", textAlign: TextAlign.right,),
                 trailing: Icon(Icons.favorite, color: Colors.black12, size: 22.0),
+                onTap: () => Navigator.pop(context),
               ),
 
               ListTile(
                 title: Text("Settings", textAlign: TextAlign.right,),
                 trailing: Icon(Icons.settings, color: Colors.black12, size: 22.0),
+                onTap: () => Navigator.pop(context),
               ),
 
             ]
@@ -111,10 +108,5 @@ class Hello extends StatelessWidget {
   }
 }
 
-// Drawer
-// DrawerHeader
-// BoxDecoration
-// ListTile
-  // title
-  // leading
-  // trailing
+// 删掉leading的menu button
+// onTap: () => Navigator.pop(context)
