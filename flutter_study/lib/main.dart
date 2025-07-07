@@ -82,7 +82,15 @@ class Hello extends StatelessWidget {
                   backgroundImage: AssetImage("assets/images/mine.webp"),
                 ),
                 decoration: BoxDecoration(
-                  color: Colors.yellow,
+                  color: Colors.yellow[400],
+                  image: DecorationImage(
+                    image: AssetImage("assets/images/back.jpeg"),
+                    fit: BoxFit.cover,
+                    colorFilter: ColorFilter.mode(
+                      Colors.yellow[400]!.withAlpha(220),
+                      BlendMode.hardLight
+                    ),
+                  ),
                 ),
               ),
 
@@ -112,10 +120,18 @@ class Hello extends StatelessWidget {
   }
 }
 
-// UserAccountsDrawerHeader
-// accountName
-// accountEmail
-// currentAccountPicture: CircleAvatar(
-//    backgroundImage: NetworkImage(...))
-// AssetImage("assets/images/mine.webp")
-// pubspec.yaml 配置 assets
+// decoration: BoxDecoration(
+
+/* 
+image: DecorationImage(
+  image: xxx
+  fit: BoxFix.cover,
+  colorFilter: ColorFilter.mode(
+    Colors.yellow[400]!.withAlpha(220),
+    BlendMode.hardLight
+  ),
+)
+
+
+
+*/
