@@ -75,10 +75,14 @@ class Hello extends StatelessWidget {
         drawer: Drawer(
           child: ListView(
             children: [
-              DrawerHeader(
-                child: Text("header".toUpperCase()),
+              UserAccountsDrawerHeader(
+                accountName: Text("liuxiaoye", style: TextStyle(fontWeight: FontWeight.bold)),
+                accountEmail: Text("xyliu_leo@163.com"),
+                currentAccountPicture: CircleAvatar(
+                  backgroundImage: AssetImage("assets/images/mine.webp"),
+                ),
                 decoration: BoxDecoration(
-                  color: Colors.grey[100],
+                  color: Colors.yellow,
                 ),
               ),
 
@@ -108,5 +112,10 @@ class Hello extends StatelessWidget {
   }
 }
 
-// 删掉leading的menu button
-// onTap: () => Navigator.pop(context)
+// UserAccountsDrawerHeader
+// accountName
+// accountEmail
+// currentAccountPicture: CircleAvatar(
+//    backgroundImage: NetworkImage(...))
+// AssetImage("assets/images/mine.webp")
+// pubspec.yaml 配置 assets
