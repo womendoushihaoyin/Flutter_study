@@ -30,6 +30,8 @@ class App extends StatelessWidget {
           backgroundColor: Colors.yellow,
           foregroundColor: Colors.black,
         ),
+        highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
+        splashColor: Colors.white70,
       ),
     );
   }
@@ -75,13 +77,20 @@ class Hello extends StatelessWidget {
             Icon(Icons.history, size: 128, color: Colors.black),
             Icon(Icons.person, size: 128, color: Colors.black),
           ],
-        )
+        ),
+        drawer: Container(
+          color: Colors.white,
+          padding: EdgeInsets.all(8.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text("This is drawer"),
+            ]
+          ),
+        ),
       ),
     );
   }
 }
 
-// TabBar unselectedLabelColor: Colors.black38,
-// indicatorSize: TabBarIndicatorSize.tab,
-// indicatorColor: Colors.black54,
-// indicatorWeight: 1,
+// drawer
