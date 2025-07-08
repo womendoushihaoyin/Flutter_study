@@ -74,7 +74,49 @@ class Hello extends StatelessWidget {
           ],
         ),
         drawer: DrawerDemo(),
+        bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+          fixedColor: Colors.black,
+          items: [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.explore),
+              label: "Explore",
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.history),
+              label: "History",
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.list),
+              label: "List",
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.person),
+              label: "My",
+            ),
+          ],
+        ),
       ),
     );
   }
 }
+
+/*
+Scaffold 中的bottom: BottomNavigationBar
+
+BottomNavigationBar(
+  type: BottomNavigationBarType.fixed, // 固定底部导航栏，否则超过三个的时候就不会再显示了
+  fixedColor: Colors.black, // 选中时的颜色
+  items: [
+    BottomNavigationBarItem(
+      icon: Icon(Icons.explore),
+      label: "Explore",
+    ),
+  ],
+),
+
+items: [
+  BottomNavigationBarItem
+]
+
+*/
