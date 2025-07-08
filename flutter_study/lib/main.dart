@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'Demo/listview_demo.dart';
 import 'Demo/drawer_demo.dart';
 import 'Demo/bottom_navigationbar_demo.dart';
+import 'Demo/basic_demo.dart';
 import 'dart:io';
 
 class MyHttpOverrides extends HttpOverrides {
@@ -70,7 +71,7 @@ class Hello extends StatelessWidget {
         body: TabBarView(
           children: <Widget>[
             ListViewDemo(),
-            Icon(Icons.history, size: 128, color: Colors.black),
+            BasicDemo(),
             Icon(Icons.person, size: 128, color: Colors.black),
           ],
         ),
