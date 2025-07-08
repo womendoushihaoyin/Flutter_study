@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'Demo/listview_demo.dart';
 import 'Demo/drawer_demo.dart';
+import 'Demo/bottom_navigationbar_demo.dart';
 import 'dart:io';
 
 class MyHttpOverrides extends HttpOverrides {
@@ -68,55 +69,19 @@ class Hello extends StatelessWidget {
         ),
         body: TabBarView(
           children: <Widget>[
-            Icon(Icons.favorite, size: 128, color: Colors.black12),
+            ListViewDemo(),
             Icon(Icons.history, size: 128, color: Colors.black),
             Icon(Icons.person, size: 128, color: Colors.black),
           ],
         ),
         drawer: DrawerDemo(),
-        bottomNavigationBar: BottomNavigationBar(
-          type: BottomNavigationBarType.fixed,
-          fixedColor: Colors.black,
-          items: [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.explore),
-              label: "Explore",
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.history),
-              label: "History",
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.list),
-              label: "List",
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.person),
-              label: "My",
-            ),
-          ],
-        ),
+        bottomNavigationBar: BottomNavigationBarDemo(),
       ),
     );
   }
 }
 
 /*
-Scaffold 中的bottom: BottomNavigationBar
 
-BottomNavigationBar(
-  type: BottomNavigationBarType.fixed, // 固定底部导航栏，否则超过三个的时候就不会再显示了
-  fixedColor: Colors.black, // 选中时的颜色
-  items: [
-    BottomNavigationBarItem(
-      icon: Icon(Icons.explore),
-      label: "Explore",
-    ),
-  ],
-),
-
-items: [
-  BottomNavigationBarItem
-]
 
 */
