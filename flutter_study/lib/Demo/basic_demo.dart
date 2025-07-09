@@ -14,14 +14,17 @@ class BasicDemo extends StatelessWidget {
     return Container(
       color: Colors.grey[100],
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
-            child: Icon(Icons.favorite, size: 32.0, color: Colors.white),
-            color: Color.fromRGBO(3, 54, 255, 1.0),
             padding: EdgeInsets.all(16.0),
             margin: EdgeInsets.all(8.0),
             width: 90.0,
             height: 90.0,
+            decoration: BoxDecoration(
+              color: Color.fromRGBO(3, 54, 255, 1.0),
+            ),
+            child: Icon(Icons.pool, size: 32.0, color: Colors.white),
           ),
         ],
       ),
@@ -32,15 +35,6 @@ class BasicDemo extends StatelessWidget {
 
 /*
 
-  RichText(
-    text: TextSpan(
-      text: "xxxx",
-      style:
-      children: [
-        TextSpan(),
-        TextSpan(),
-      ]
-    ),
-  ),
+decoration属性里面的颜色和外面的Color不能同时存在
 
  */
