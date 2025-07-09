@@ -23,13 +23,11 @@ class BasicDemo extends StatelessWidget {
             height: 90.0,
             decoration: BoxDecoration(
               color: Color.fromRGBO(3, 54, 255, 1.0),
-              // border: Border(
-              //   top: BorderSide(
-              //     color: Colors.indigoAccent,
-              //     width: 3.0,
-              //     style: BorderStyle.solid,
-              //   )
-              // )
+              // borderRadius: BorderRadius.only(
+              //   topLeft: Radius.circular(64.0),
+              //   bottomLeft: Radius.circular(64.0),
+              // ),
+              borderRadius: BorderRadius.all(Radius.circular(16.0)),
               border: Border.all(
                 color: Colors.indigoAccent,
                 width: 3.0,
@@ -47,19 +45,13 @@ class BasicDemo extends StatelessWidget {
 
 /*
 
-BoxDicoration(
-  border: Border(
-    top: BorderSide(
-      color,
-      width,
-      style
-    ),
-    bottom:
-    left:
-    right:
-  ),
-
-  border: Border.all()
+borderRadius: BorderRadius.only(
+  topLeft,
+  bottomLeft,
+  topRight,
+  bottomRight,
 ),
+
+borderRadius: BorderRadius.all(Radius.circular(16.0))
 
  */
