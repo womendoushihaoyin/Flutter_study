@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 class LayoutDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
         IconBadge(Icons.pool),
         IconBadge(Icons.beach_access),
@@ -32,3 +33,8 @@ class IconBadge extends StatelessWidget {
 
 
 
+/*
+
+  mainAxisAlignment: MainAxisAlignment.start / end / center / spaceAround / spaceBetween / spaceEvenly
+
+ */
