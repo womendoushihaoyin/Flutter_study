@@ -5,6 +5,7 @@ class LayoutDemo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      crossAxisAlignment: CrossAxisAlignment.end,
       children: <Widget>[
         IconBadge(Icons.pool),
         IconBadge(Icons.beach_access),
@@ -35,6 +36,6 @@ class IconBadge extends StatelessWidget {
 
 /*
 
-  mainAxisAlignment: MainAxisAlignment.start / end / center / spaceAround / spaceBetween / spaceEvenly
+  crossAxisAlignment: CrossAxisAlignment.start / end / center / stretch
 
  */
