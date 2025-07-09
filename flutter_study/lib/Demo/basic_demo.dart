@@ -11,25 +11,20 @@ class BasicDemo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return RichText(
-      text: TextSpan(
-        text: "Liuxiaoye",
-        style: TextStyle(
-          color: Colors.deepPurpleAccent,
-          fontSize: 34.0,
-          fontStyle: FontStyle.italic,
-          fontWeight: FontWeight.w200,
-        ),
+    return Container(
+      color: Colors.grey[100],
+      child: Row(
         children: [
-          TextSpan(
-            text: ".net",
-            style: TextStyle(
-              fontSize: 17.0,
-              color: Colors.grey,
-            )
-          )
-        ]
-      )
+          Container(
+            child: Icon(Icons.favorite, size: 32.0, color: Colors.white),
+            color: Color.fromRGBO(3, 54, 255, 1.0),
+            padding: EdgeInsets.all(16.0),
+            margin: EdgeInsets.all(8.0),
+            width: 90.0,
+            height: 90.0,
+          ),
+        ],
+      ),
     );
   }
 }
