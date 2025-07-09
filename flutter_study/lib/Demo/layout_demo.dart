@@ -6,6 +6,8 @@ class LayoutDemo extends StatelessWidget {
     return Column(
       children: <Widget>[
         IconBadge(Icons.pool),
+        IconBadge(Icons.beach_access),
+        IconBadge(Icons.airplanemode_active),
       ],
     );
   }
