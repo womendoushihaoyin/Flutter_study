@@ -12,7 +12,19 @@ class BasicDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.grey[100],
+      decoration: BoxDecoration(
+        color: Colors.grey[100],
+        image: DecorationImage(
+          image: AssetImage("assets/images/back.jpeg"),
+          // fit: BoxFit.cover,
+          alignment: Alignment.topCenter,
+          repeat: ImageRepeat.repeatY,
+          colorFilter: ColorFilter.mode(
+            Colors.black.withOpacity(0.5),
+            BlendMode.hardLight,
+          ),
+        ),
+      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -38,13 +50,6 @@ class BasicDemo extends StatelessWidget {
                 )
               ],
               shape: BoxShape.circle,
-              // gradient: RadialGradient(
-              //   colors: [
-              //     Color.fromRGBO(7, 102, 255, 1.0),
-              //     Color.fromRGBO(3, 28, 238, 1.0),
-              //   ]
-              // ),
-
               gradient: LinearGradient(
                 colors: [
                   Color.fromRGBO(7, 102, 255, 1.0),
@@ -66,10 +71,15 @@ class BasicDemo extends StatelessWidget {
 /*
 
 
-gradient: RadialGradient / LinearGradient
+image: DecorationImage()
+  image: AssetImage()
+  alignment: Alignment.topCenter
+  repeat: ImageRepeat.repeatY
+  colorFilter: ColorFilter.mode(
+    Colors.black.withOpacity(0.5),
+    BlendMode.hardLight,
+  )
 
-colors
-begin: Alignment.topCenter
-end:xxx
+
 
  */
