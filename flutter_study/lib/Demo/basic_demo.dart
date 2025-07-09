@@ -32,7 +32,15 @@ class BasicDemo extends StatelessWidget {
                 color: Colors.indigoAccent,
                 width: 3.0,
                 style: BorderStyle.solid,
-              )
+              ),
+              boxShadow: [
+                BoxShadow(
+                  offset: Offset(0.0, 16.0),
+                  color: Color.fromRGBO(16, 20, 188, 1.0),
+                  blurRadius: 25.0,
+                  spreadRadius: -9.0
+                )
+              ]
             ),
             child: Icon(Icons.pool, size: 32.0, color: Colors.white),
           ),
@@ -45,13 +53,13 @@ class BasicDemo extends StatelessWidget {
 
 /*
 
-borderRadius: BorderRadius.only(
-  topLeft,
-  bottomLeft,
-  topRight,
-  bottomRight,
-),
-
-borderRadius: BorderRadius.all(Radius.circular(16.0))
+boxShadow: [
+  BoxShadow(
+    offset: Offset(),
+    blurRadius:
+    spreadRadius
+    color
+  )
+]
 
  */
