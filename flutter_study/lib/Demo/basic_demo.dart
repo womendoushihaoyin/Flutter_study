@@ -23,11 +23,7 @@ class BasicDemo extends StatelessWidget {
             height: 90.0,
             decoration: BoxDecoration(
               color: Color.fromRGBO(3, 54, 255, 1.0),
-              // borderRadius: BorderRadius.only(
-              //   topLeft: Radius.circular(64.0),
-              //   bottomLeft: Radius.circular(64.0),
-              // ),
-              borderRadius: BorderRadius.all(Radius.circular(16.0)),
+              // borderRadius: BorderRadius.all(Radius.circular(16.0)),
               border: Border.all(
                 color: Colors.indigoAccent,
                 width: 3.0,
@@ -40,7 +36,8 @@ class BasicDemo extends StatelessWidget {
                   blurRadius: 25.0,
                   spreadRadius: -9.0
                 )
-              ]
+              ],
+              shape: BoxShape.circle,
             ),
             child: Icon(Icons.pool, size: 32.0, color: Colors.white),
           ),
@@ -53,13 +50,7 @@ class BasicDemo extends StatelessWidget {
 
 /*
 
-boxShadow: [
-  BoxShadow(
-    offset: Offset(),
-    blurRadius:
-    spreadRadius
-    color
-  )
-]
+
+shape: BoxShape.circle, BoxShape.Rectangle
 
  */
